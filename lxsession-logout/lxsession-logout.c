@@ -129,6 +129,10 @@ static const gchar* determine_lock_screen(void)
     {
         program = "xdg-screensaver lock";
     }
+    else if (g_find_program_in_path("slock"))
+    {
+        program = "slock";
+    }
     return program;
 }
 
